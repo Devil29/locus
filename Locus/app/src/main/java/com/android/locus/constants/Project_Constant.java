@@ -6,7 +6,7 @@ package com.android.locus.constants;
 
 public class Project_Constant {
     public static final String GetMapRouteUrl="https://maps.googleapis.com/maps/api/directions/json?";
-    public static final String GoogleApiKey="AIzaSyDnwLF2-WfK8cVZt9OoDYJ9Y8kspXhEHfI";
+    public static final String GoogleApiKey="AIzaSyDVNB8aG4P5a-a6VE8QF4240Vng1oHaW5E";
     public static final String GetPlaceApiUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/";
     public static final int RadiusResturant=200;
     public static final int RadiusPolice=1000;
