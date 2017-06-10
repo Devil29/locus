@@ -96,32 +96,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     void addDataPoints(){
-        LatLng l1 = new LatLng(12.99243182, 77.61554008);
-        LatLng l2 = new LatLng(12.98773182, 77.61367008);
-        LatLng l3 = new LatLng(12.96362182, 77.58254008);
+        LatLng l1 = new LatLng(12.960146, 77.648496);
+        LatLng l2 = new LatLng(12.9488759, 77.6434208);
 
-        LatLng l4 = new LatLng(12.96562182, 77.58557008);
-        LatLng l5 = new LatLng(12.96461182, 77.58194008);
+        LatLng l3 = new LatLng(12.9602623, 77.64438169);
+        LatLng l4 = new LatLng(12.959964, 77.6454096);
+        LatLng l5 = new LatLng(12.9598663, 77.644736);
 
-        LatLng l6 = new LatLng(12.96461182, 77.58197008);
-        LatLng l7 = new LatLng(12.96461182, 77.58197008);
-        LatLng l8 = new LatLng(12.96461182, 77.58197008);
+
+        LatLng l6 = new LatLng(12.9519328, 77.6409048);
+        LatLng l7 = new LatLng(12.9501785, 77.6417371);
+
+
+        LatLng l8 = new LatLng(12.916524, 77.601341);
+        LatLng l9 = new LatLng(12.917524, 77.602341);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(l1,13.0f));
-        AddMarker(l1, "Delivery1");
-        AddMarker(l2, "Delivery2");
-        AddMarker(l3, "Delivery3");
+        AddMarker(l1, "Delivery1 at 3:00pm");
+        AddMarker(l2, "Delivery2 at 3:00pm");
+        AddMarker(l3, "Delivery3 at 3:00pm");
 
-        AddMarker(l4, "Delivery4");
-        AddMarker(l5, "Delivery3");
+        AddMarker(l4, "Delivery4 at 3:30pm");
+        AddMarker(l5, "Delivery5 at 3:30pm");
 
-        AddMarker(l6, "Delivery4");
-        AddMarker(l7, "Delivery4");
-        AddMarker(l8, "Delivery4");
+        AddMarker(l6, "Delivery6 at 4:0opm");
+        AddMarker(l7, "Delivery7 at 4:30pm");
+        AddMarker(l8, "Delivery8 at 5:00pm");
+        AddMarker(l9, "Delivery9 at 5:00pm ");
 
         AddCircle(l1);
-        AddCircle(l2);
-        AddCircle(l3);
+        AddCircle(l6);
+        AddCircle(l8);
     }
 
     public void AddMarker(LatLng l, String name){
@@ -184,7 +189,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             polylineOptions = new PolylineOptions().
                     geodesic(true).
                     color(Color.BLUE).
-                    width(20);
+                    width(10);
             for (int i = 0; i < route.points.size(); i++)
                 polylineOptions.add(route.points.get(i));
 
@@ -226,8 +231,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onPathFind() {
         color = 0;
         Log.d("Finding path", TAG);
-        String source = "domlur Bangalore";
-        String destination = "BTM Bangalore";
+        String source = "23, Old Airport Road, Kodihalli, HAL 2nd Stage, Kodihalli, Bengaluru";
+        String destination = "No.15, Adjacent To Jayadeva Hospital, 100 Feet Main Road, BTM, 2nd Stage, BHBCS Layout, Stage 2, BTM 2nd Stage, Bengaluru, ";
         if (source == null || destination == null || source.equals("") || destination.equals(""))
             return;
         Log.d(TAG, "" + source + destination);
